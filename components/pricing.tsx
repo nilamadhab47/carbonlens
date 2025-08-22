@@ -3,10 +3,8 @@
 import { motion } from 'framer-motion'
 import { Check, Star, Crown, Zap, Rocket, Target, DollarSign, ArrowRight } from 'lucide-react'
 import { Button } from '@/components/ui/button'
-import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
 import { Badge } from '@/components/ui/badge'
 import { pricing } from '@/lib/site-data'
-import { fadeInUp, staggerContainer } from '@/lib/animations'
 
 export function Pricing() {
   return (
@@ -125,7 +123,7 @@ export function Pricing() {
                       '• Custom emission factors',
                       '• Methodology validation',
                       '• Priority feature requests'
-                    ].map((item, index) => (
+                    ].map((item) => (
                       <div key={item}>
                         {item}
                       </div>

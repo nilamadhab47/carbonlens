@@ -72,7 +72,7 @@ export function Hero() {
               Automated carbon reports
             </span>
             <br />
-            your auditors won't argue with
+            your auditors won&apos;t argue with
           </motion.h1>
 
           <motion.p

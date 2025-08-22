@@ -16,7 +16,13 @@ const iconMap: Record<string, LucideIcon> = {
 }
 
 // Simple Feature Card
-const FeatureCard = ({ feature, index }: { feature: any; index: number }) => {
+interface Feature {
+  icon: string;
+  title: string;
+  description: string;
+}
+
+const FeatureCard = ({ feature, index }: { feature: Feature; index: number }) => {
   const IconComponent = iconMap[feature.icon]
 
   return (

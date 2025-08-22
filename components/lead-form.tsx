@@ -68,7 +68,7 @@ export function LeadForm() {
                   Thank you for your interest!
                 </h3>
                 <p className="text-muted-foreground mb-4">
-                  We've received your request and will get back to you within 24 hours to schedule your demo.
+                  We&apos;ve received your request and will get back to you within 24 hours to schedule your demo.
                 </p>
                 <div className="text-sm text-muted-foreground">
                   Check your email for confirmation and next steps.
@@ -199,7 +199,7 @@ export function LeadForm() {
                 <div className="text-center text-sm text-muted-foreground">
                   By submitting this form, you agree to our privacy policy and terms of service.
                   <br />
-                  We'll only use your information to provide the demo and follow up on your inquiry.
+                  We&apos;ll only use your information to provide the demo and follow up on your inquiry.
                 </div>
               </form>
             </CardContent>

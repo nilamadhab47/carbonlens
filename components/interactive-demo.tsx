@@ -1,12 +1,10 @@
 'use client'
 
 import { useState, useEffect, useRef } from 'react'
-import { motion, AnimatePresence, useInView } from 'framer-motion'
-import { Play, Pause, RotateCcw, ChevronRight, FileText, BarChart3, Download, Zap, Cpu, Database, Sparkles, Globe, ArrowRight } from 'lucide-react'
+import { motion, AnimatePresence } from 'framer-motion'
+import { Play, Pause, RotateCcw, FileText, BarChart3, Download, Zap, Cpu, Database, Sparkles, ArrowRight } from 'lucide-react'
 import { Button } from '@/components/ui/button'
-import { Card, CardContent } from '@/components/ui/card'
 import { Badge } from '@/components/ui/badge'
-import { fadeInUp } from '@/lib/animations'
 
 const demoSteps = [
   {
@@ -51,35 +49,13 @@ const demoSteps = [
 ]
 
 // Floating Particle Component
-const FloatingParticle = ({ delay = 0, position }: { delay?: number; position: { x: number; y: number } }) => (
-  <motion.div
-    className="absolute w-2 h-2 bg-emerald-400/60 rounded-full"
-    style={{
-      left: `${position.x}%`,
-      top: `${position.y}%`,
-    }}
-    animate={{
-      y: [-20, 20, -20],
-      x: [-10, 10, -10],
-      opacity: [0.3, 1, 0.3],
-      scale: [0.5, 1.5, 0.5],
-    }}
-    transition={{
-      duration: 4 + (delay * 0.5),
-      repeat: Infinity,
-      delay: delay,
-      ease: "easeInOut",
-    }}
-  />
-)
+
 
 export function InteractiveDemo() {
   const [currentStep, setCurrentStep] = useState(0)
   const [isPlaying, setIsPlaying] = useState(false)
   const [progress, setProgress] = useState(0)
-  const [isHovered, setIsHovered] = useState(false)
   const sectionRef = useRef<HTMLDivElement>(null)
-  const isInView = useInView(sectionRef)
 
   useEffect(() => {
     let interval: NodeJS.Timeout
@@ -186,7 +162,7 @@ export function InteractiveDemo() {
             </div>
             <div className="space-y-2">
               <div className="text-sm font-medium">Generated Tables:</div>
-              {step.preview.tables?.map((table, index) => (
+              {step.preview.tables?.map((table) => (
                 <div key={table} className="flex items-center gap-2 text-sm text-muted-foreground">
                   <BarChart3 className="h-3 w-3" />
                   {table}
@@ -377,13 +353,7 @@ export function InteractiveDemo() {
               </motion.div>
 
               {/* Revolutionary Demo Preview */}
-              <motion.div
-                className="relative min-h-[400px] glass-emerald rounded-2xl border border-emerald-500/40 overflow-hidden"
-                animate={isHovered ? {
-                  borderColor: "rgba(16, 185, 129, 0.6)",
-                } : {}}
-                transition={{ duration: 0.3 }}
-              >
+              <div className="relative min-h-[400px] glass-emerald rounded-2xl border border-emerald-500/40 overflow-hidden">
                 {/* Dynamic Background Pattern */}
                 <motion.div
                   className="absolute inset-0 opacity-10"
@@ -465,7 +435,7 @@ export function InteractiveDemo() {
                 >
                   <Cpu className="w-5 h-5 text-teal-400/60" />
                 </motion.div>
-              </motion.div>
+              </div>
 
               {/* Award-Winning CTA Section */}
               <motion.div

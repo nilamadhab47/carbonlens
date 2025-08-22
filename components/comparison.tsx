@@ -2,10 +2,8 @@
 
 import { motion } from 'framer-motion'
 import { Check, X, AlertTriangle, Crown, TrendingUp, Award } from 'lucide-react'
-import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
 import { Badge } from '@/components/ui/badge'
 import { comparison } from '@/lib/site-data'
-import { fadeInUp, staggerContainer } from '@/lib/animations'
 
 export function Comparison() {
 

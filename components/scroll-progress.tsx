@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from 'react'
 import { motion } from 'framer-motion'
-import { Zap, Sparkles } from 'lucide-react'
+import { Zap } from 'lucide-react'
 
 export function ScrollProgress() {
   const [scrollProgress, setScrollProgress] = useState(0)

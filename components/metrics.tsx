@@ -6,10 +6,18 @@ import { metrics } from '@/lib/site-data'
 import { fadeInUp, staggerContainer } from '@/lib/animations'
 
 // Simple Metric Card Component
+interface Metric {
+  value: number;
+  suffix: string;
+  prefix: string;
+  label: string;
+  description: string;
+}
+
 const MetricCard = ({ metric, index, icon: Icon }: { 
-  metric: any; 
+  metric: Metric; 
   index: number; 
-  icon: any;
+  icon: React.ComponentType<{ className?: string }>;
 }) => {
   return (
     <motion.div

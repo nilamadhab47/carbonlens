@@ -1,7 +1,7 @@
 'use client'
 
 import { motion } from 'framer-motion'
-import { Shield, Award, Users, Clock, CheckCircle, Star } from 'lucide-react'
+import { Shield, Award, Users, Clock } from 'lucide-react'
 import { Card, CardContent } from '@/components/ui/card'
 import { Badge } from '@/components/ui/badge'
 import { fadeInUp, staggerContainer } from '@/lib/animations'

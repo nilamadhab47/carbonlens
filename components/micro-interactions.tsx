@@ -123,7 +123,7 @@ export function ShareButton() {
           text: 'Check out CarbonLens for automated carbon reporting',
           url: window.location.href,
         })
-      } catch (err) {
+      } catch {
         console.log('Share cancelled')
       }
     } else {
@@ -184,7 +184,12 @@ export function CopyButton({ text }: { text: string }) {
   )
 }
 
-export function PulseButton({ children, ...props }: any) {
+interface PulseButtonProps {
+  children: React.ReactNode;
+  [key: string]: unknown;
+}
+
+export function PulseButton({ children, ...props }: PulseButtonProps) {
   return (
     <motion.div
       animate={{

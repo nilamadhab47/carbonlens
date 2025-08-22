@@ -31,10 +31,10 @@ export function PerformanceMonitor() {
             newMetrics.lcp = entry.startTime
           }
           if (entry.entryType === 'layout-shift') {
-            newMetrics.cls = (newMetrics.cls || 0) + (entry as any).value
+            newMetrics.cls = (newMetrics.cls || 0) + (entry as unknown as { value: number }).value
           }
           if (entry.entryType === 'first-input') {
-            newMetrics.fid = (entry as any).processingStart - entry.startTime
+            newMetrics.fid = (entry as unknown as { processingStart: number }).processingStart - entry.startTime
           }
         })
 

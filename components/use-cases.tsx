@@ -28,7 +28,7 @@ export function UseCases() {
             className="text-xl text-muted-foreground max-w-3xl mx-auto"
             variants={fadeInUp}
           >
-            From textiles to heavy industry, CarbonLens adapts to your sector's unique requirements
+            From textiles to heavy industry, CarbonLens adapts to your sector&apos;s unique requirements
           </motion.p>
         </motion.div>
 
@@ -108,7 +108,7 @@ export function UseCases() {
         >
           <div className="max-w-2xl mx-auto p-8 rounded-2xl bg-gradient-to-r from-emerald-500/10 to-teal-500/10 border border-emerald-500/20">
             <h3 className="text-xl font-heading font-semibold mb-2">
-              Don't see your industry?
+              Don&apos;t see your industry?
             </h3>
             <p className="text-muted-foreground mb-4">
               Our pilot program includes custom methodology development for your specific sector requirements.

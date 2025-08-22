@@ -5,9 +5,7 @@ import { motion } from 'framer-motion'
 import { ArrowRight, Play, Sparkles, Zap, Globe, Star, Rocket } from 'lucide-react'
 import { Button } from '@/components/ui/button'
 import { Badge } from '@/components/ui/badge'
-import { siteConfig } from '@/lib/site-data'
 import { fadeInUp, staggerContainer } from '@/lib/animations'
-import { MicroInteraction, PulseButton } from '@/components/micro-interactions'
 
 
 
@@ -207,7 +205,7 @@ export function EnhancedHero() {
                 transition: { duration: 4, repeat: Infinity }
               })}
             >
-              your auditors won't argue with
+                                    your auditors won&apos;t argue with
             </motion.span>
           </motion.h1>
 

@@ -112,7 +112,7 @@ export function Navbar() {
           {/* Premium Desktop Navigation */}
           <div className="hidden md:block">
             <div className="ml-10 flex items-center space-x-8">
-              {navigation.map((item, index) => (
+              {navigation.map((item) => (
                 <motion.a
                   key={item.name}
                   href={item.href}
